@@ -1,6 +1,6 @@
 from flask import Flask
 import os
-from src.config.config import Config
+from src.config.config import BaseConfig
 from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -12,7 +12,7 @@ load_dotenv()
 app = Flask(__name__)
 
 # calling the dev configuration
-config = Config().dev_config
+config = BaseConfig().dev_config
 
 # making our application to use dev env
 app.env = config.ENV

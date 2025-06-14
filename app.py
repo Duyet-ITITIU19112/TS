@@ -40,9 +40,11 @@
 # if __name__ == '__main__':
 #     app.run(host='0.0.0.0', port=5000, debug=os.getenv("FLASK_DEBUG", "false").lower() == "true")
 
+# app/app.py
 from flask import Flask
 from src.models import db
 from src.config.dev_config import DevConfig
+from src.services.elastic_service import create_index_if_not_exists
 
 def create_app():
     app = Flask(__name__)
@@ -52,6 +54,8 @@ def create_app():
     with app.app_context():
         from src.models import user_model, document_model
         db.create_all()
+        create_index_if_not_exists()
 
     return app
+
 
