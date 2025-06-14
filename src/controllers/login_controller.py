@@ -1,6 +1,6 @@
 from src.utils.msal_helper import initiate_auth_flow, acquire_auth_token
 from src.services.onedrive_service import fetch_onedrive_files
-from src.models.user import User
+from src.models.user_model import User
 
 class LoginController:
     @staticmethod
