@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Login with OneDrive</title>
 </head>
 <body>
-    <h1>Welcome to the Flask Microsoft Integration App</h1>
-    <p>Click the button below to log in to Microsoft and access your OneDrive files:</p>
-    <a href="/api/login">Log in with Microsoft</a>
+    <h1>Welcome!</h1>
+    <p>Click below to log in via Microsoft OneDrive:</p>
+    <a href="{{ url_for('auth.login') }}">
+        <button type="button">Login with OneDrive</button>
+    </a>
 </body>
 </html>

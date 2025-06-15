@@ -1,8 +1,11 @@
-flask
-pathlib
-python-dotenv
+flask~=3.1.0
+pathlib~=1.0.1
+python-dotenv~=1.0.1
 PyJWT
 Flask-SQLAlchemy
 Flask-Migrate
 flask-bcrypt
 mysqlclient
+requests~=2.32.3
+elasticsearch~=9.0.2
+
